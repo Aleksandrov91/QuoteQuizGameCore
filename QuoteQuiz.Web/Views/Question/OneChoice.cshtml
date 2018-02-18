@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Quote Quiz";
+}
+
+<div id="success-notification" class="alert alert-success" style="display:none">
+    <strong>Correct!</strong>
+</div>
+<div id="fail-notification" class="alert alert-danger" style="display:none">
+    <strong>Sorry, you are wrong!</strong>
+</div>
+<div class="col-md-8 col-md-offset-2">
+    <div class="jumbotron question">
+        <h3 name="text">"@Model.Text"</h3>
+    </div>
+    <h1 class="whoSaidIt" id="author">@Model.Author?</h1>
+    <div>
+        <a class="btn btn-success" onclick="checkOneChoiceAnswer('@Model.Correct', 1)">Yes</a>
+        <a class="btn btn-danger col-md-offset-10" onclick="checkOneChoiceAnswer('@Model.Correct', 0)">No</a>
+    </div>
+    <p id="nextQuestion" style="display:none">
+        <a class="btn btn-primary" href="/Question/OneChoice?questionPage=@(ViewBag.QuestionPage + 1)">Next Question</a>
+    </p>
+</div>

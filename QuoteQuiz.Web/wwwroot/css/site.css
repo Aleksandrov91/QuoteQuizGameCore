@@ -1,0 +1,38 @@
+﻿.whoSaidIt {
+    color: grey;
+}
+
+.jumbotron {
+    color: white;
+    font-size: 22px;
+}
+
+.jumbotron.question {
+    background-color: deeppink;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.jumbotron.answer {
+    background-color: darkslategrey;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.jumbotron.answer:hover {
+    background-color: darkgray;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#nextQuestion {
+    text-align: center;
+}
+
+#author {
+    text-align:center;
+}

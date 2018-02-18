@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Quote Quiz";
+}
+
+<div id="success-notification" class="alert alert-success" style="display:none">
+    <strong>Correct!</strong> The right answer is: @Model.CorrectAnswer.
+</div>
+<div id="fail-notification" class="alert alert-danger" style="display:none">
+    <strong>Sorry, you are wrong!</strong> The right answer is: @Model.CorrectAnswer.
+</div>
+<div class="col-md-8 col-md-offset-2">
+    <div class="jumbotron question">
+        <h3 name="text">"@Model.Text"</h3>
+    </div>
+    <h2 id="author" class="whoSaidIt" style="display:none">@Model.Author</h2>
+    <div class="col-md-10 col-md-offset-1">
+        @foreach (var answer in Model.Answers)
+        {
+            <div class="jumbotron answer" onclick="checkMultipleChoicesAnswer('@answer.IsCorrect')">
+                <div>-> @answer.Text</div>
+            </div>
+        }
+        <p id="nextQuestion" style="display:none">
+            <a class="btn btn-primary" href="/Question/MultipleChoice?questionPage=@(ViewBag.QuestionPage + 1)">Next Question</a>
+        </p>
+    </div>
+</div>
