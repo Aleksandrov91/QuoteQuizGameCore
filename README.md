@@ -1,0 +1,2 @@
+# QuoteQuizGameCore
+Simple Quiz game
