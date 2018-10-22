@@ -1,4 +1,7 @@
-QuoteQuiz Game
+# QuoteQuiz Game
+
+![QuoteQuiz screenshot](https://github.com/Aleksandrov91/QuoteQuizGameCore/blob/master/QuoteQuizScreen.JPG?raw=true)
+
 The project is written on Asp.NET Core v.2.0.1
 In solution contains 4 projects. It’s have class library projects for Database context, Database models and for web services. The last project is web project who contains Controllers and Views.
 Database is created on model Code-First and contains 3 tables. One table for Question with Yes/No answer, and two for Question with more that one choice. In first table it’s stored questions with their text and author. In other table is stored answers with question Id (One to many relation).
